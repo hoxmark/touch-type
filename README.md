@@ -1,3 +1,31 @@
+# Typing Exercise
+
+This is a React component that provides a typing exercise for the user. It fetches an exercise from an API and displays it to the user. The user can then type the exercise and the component will calculate their typing speed in words per minute (WPM).
+
+## Installation
+
+To use this component, you need to have React installed in your project. You can then install the component using npm:
+
+npm install typing-exercise
+
+
+## Usage
+
+To use the component, import it into your React component and pass in the `exercise_id` prop:
+
+```javascript
+import TypingExercise from 'typing-exercise';
+
+function App() {
+  return (
+    <TypingExercise exercise_id={1} />
+  );
+}
+
+The exercise_id prop is the ID of the exercise you want to fetch from the API.
+```
+
+
 # chatGPT 
 
 ```
