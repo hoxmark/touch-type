@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import '../css/TypingExcercise.css';
 import useWPM from '../hooks/useWPM'; // Import the custom hook
+import NorwegianMacKeyboard from "./keyboards/NorwegianMacKeyboard";
+
 
 function TypingExercise() {
     const [exercises, setExercises] = useState([]);
@@ -38,13 +40,24 @@ function TypingExercise() {
         const inputChars = input.split('');
 
         return contentChars.map((char, index) => {
-            if (inputChars[index] === char) {
-                return <span key={index} style={{ color: 'green' }}>{char}</span>;
-            } else if (inputChars[index]) {
-                return <span key={index} style={{ color: 'red', textDecoration: 'underline' }}>{inputChars[index]}</span>;
-            } else {
-                return <span key={index}>{char}</span>;
+            let className = "character-key"; // Default class
+
+            if (index === input.length) {
+                className += " active";  // Add the active class
             }
+
+            if (inputChars[index] === char) {
+                className += " correct";
+            } else if (inputChars[index]) {
+                className += " incorrect";
+                // char = inputChars[index];  // Overwrite with the input character for incorrect chars
+            }
+            char = char === " " ? "␣" : char;
+            return (
+                <span key={index} className={className}>
+                    {char}
+                </span>
+            );
         });
     };
 
@@ -88,11 +101,21 @@ function TypingExercise() {
 
                             {isCompleted && <footer className="exercise-footer">Congratulations on completing the exercise!</footer>}
                         </div>
+
+                        <h3>Look at this keyboard, not your own</h3>
+                        <NorwegianMacKeyboard
+                            targetKey={(exercise.content[userInput.length] || '').toUpperCase()}
+                        />
                     </div>
+
+
                 ))}
             </section>
+
         </div>
     );
+
+
 
 }
 

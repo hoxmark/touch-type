@@ -1,0 +1,123 @@
+.keyboard-mac-row {
+    display: flex;
+    justify-content: flex-start;
+    /* Start aligning items from the left */
+    align-items: center;
+    margin-bottom: 10px;
+    /* Add some vertical space between the rows */
+}
+
+
+
+.keyboard-mac-key {
+    flex-grow: 1;
+    /* Allow keys to grow and take up space */
+    width: 40px;
+    /* Base width */
+    height: 40px;
+    /* Key height for regular size keys */
+    background-color: #f1f1f1;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+    /* Adjust if the font size is too big */
+    margin: 0 3px;
+    /* Adjust this value as necessary for the space between the keys */
+
+}
+
+.keyboard-mac-key:hover {
+    background-color: #e1e1e1;
+    /* Slight hover effect for interactivity */
+}
+
+/* For the special keys, give them a larger base width but 
+still allow them to grow and take up space if necessary */
+
+.keyboard-mac-key.caps-lock,
+.keyboard-mac-key.shift,
+.keyboard-mac-key.backspace,
+.keyboard-mac-key.tab,
+.keyboard-mac-key.enter,
+.keyboard-mac-key.fn,
+.keyboard-mac-key.ctrl,
+.keyboard-mac-key.alt,
+.keyboard-mac-key.cmd,
+.keyboard-mac-key.space {
+    flex-grow: 1;
+}
+
+.keyboard-mac-key.caps-lock {
+    width: 80px;
+}
+
+.keyboard-mac-key.shift {
+    width: 90px;
+}
+
+.keyboard-mac-key.backspace {
+    width: 110px;
+}
+
+.keyboard-mac-key.tab {
+    width: 60px;
+}
+
+.keyboard-mac-key.enter {
+    width: 70px;
+}
+
+.keyboard-mac-key.fn,
+.keyboard-mac-key.ctrl,
+.keyboard-mac-key.alt,
+.keyboard-mac-key.cmd {
+    width: 50px;
+}
+
+.keyboard-mac-key.space {
+    width: 250px;
+}
+
+/* To ensure the overall alignment is not affected, we'll negate the left margin 
+   of the first key and the right margin of the last key in each row */
+.keyboard-mac-row>.keyboard-mac-key:first-child {
+    margin-left: 0;
+}
+
+.keyboard-mac-row>.keyboard-mac-key:last-child {
+    margin-right: 0;
+}
+
+
+.keyboard-mac-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.keyboard-mac-div {
+    padding: 30px 15%;
+    margin: 20px;
+    /* Adjust this as per your design preference */
+    padding: 20px;
+    /* If you want some space inside the section */
+    box-shadow: 0px 4px 10px rgba(177, 175, 175, 0.1);
+    background: linear-gradient(to bottom, #f1f1f1, #d7d7d7);
+    border-radius: 10px;
+    /* rounded corners */
+
+}
+
+.keyboard-mac-key.highlighted {
+    background-color: #4CAF50;
+    /* This is just a sample color, you can choose your desired color */
+    color: white;
+    /* This will change the text color to white */
+    box-shadow: 0px 0px 15px #4CAF50;
+    /* Optional: For a subtle glow effect around the key */
+}
