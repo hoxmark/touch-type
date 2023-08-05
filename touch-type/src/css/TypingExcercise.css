@@ -1,0 +1,49 @@
+.exercise-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15%;
+}
+
+.exercise-container {
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 800px;
+}
+
+.exercise-header,
+.exercise-footer {
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #E9ECEF;
+    /* Only for the header */
+}
+
+.exercise-content {
+    padding: 20px;
+}
+
+.text-display {
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.next-character {
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid #E9ECEF;
+    border-radius: 5px;
+    resize: none;
+    /* Prevents the user from resizing the textarea */
+}
