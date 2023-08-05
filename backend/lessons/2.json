@@ -1,0 +1,91 @@
+{
+    "metadata": {
+        "lesson_id": "LHHR_002",
+        "lesson_level": "beginner",
+        "duration": "20 minutes",
+        "date_created": "2023-08-05",
+        "last_modified": "2023-08-05",
+        "language": "en",
+        "keyboard": "qwerty_norwegian"
+    },
+    "lesson_title": "Norwegian Keyboard Practice: Right Hand Home Row",
+    "chapter": "Chapter 3: Right Hand Home Row Keys",
+    "objective": "Familiarize yourself with the right hand home row keys, building muscle memory and accuracy.",
+    "warm_up": "Before starting, ensure your right hand is correctly placed on the home row: Little finger on 'Æ', Ring finger on 'Ø', Middle finger on 'L', Index finger on 'K'. Your thumb should rest lightly on the space bar.",
+    "exercises": [
+        {
+            "name": "Exercise 1: Single Key Strokes",
+            "description": "Focus on pressing each home row key on the right hand individually.",
+            "tasks": [
+                "Æ Æ Æ Æ Æ",
+                "Ø Ø Ø Ø Ø",
+                "L L L L L",
+                "K K K K K"
+            ]
+        },
+        {
+            "name": "Exercise 2: Key Combinations",
+            "description": "Press keys in varying sequences on the right hand.",
+            "tasks": [
+                "ÆØLK",
+                "KØÆL",
+                "ØKÆL",
+                "ÆLØK",
+                "LKÆØ",
+                "KØLÆ"
+            ]
+        },
+        {
+            "name": "Exercise 3: Word Practice",
+            "description": "Type the following combinations using the right hand keys.",
+            "tasks": [
+                "Løk",
+                "Ølk",
+                "Ælk",
+                "Øl",
+                "Æl",
+                "Løkk",
+                "Ølkø",
+                "Kål",
+                "Løkkel",
+                "Ælkøl",
+                "Ølkål",
+                "Køl",
+                "Løkkøl",
+                "Ælkølk",
+                "Ølkøl",
+                "Kåløk",
+                "Løkkål",
+                "Ølkøkk",
+                "Køløk"
+            ]
+        },
+        {
+            "name": "Exercise 4: Rapid Repetition",
+            "description": "Type the following sequence rapidly using the right hand keys.",
+            "tasks": [
+                "Løk Ølk Kål Løkk Ølkø Køl Løkkøl Ælkølk Ølkøl Kåløk Løkkål"
+            ]
+        }
+    ],
+    "lesson_images": [
+        "https://example.com/lesson_image1.jpg",
+        "https://example.com/lesson_image2.jpg"
+    ],
+    "progress_tracking": {
+        "completion_status": false,
+        "accuracy_target": 95,
+        "speed_target": 25
+    },
+    "feedback_and_tips": {
+        "common_mistakes": "Avoid tensing up your fingers. Keep them relaxed and use the appropriate finger for each key.",
+        "additional_resources": []
+    },
+    "user_feedback_mechanism": {
+        "user_rating": null,
+        "comments_section": []
+    },
+    "next_lesson_id": "LHHR_003",
+    "cool_down": "After completing the exercises, stretch each finger individually. Pull gently back on each tip, ensuring you feel a light stretch but no pain. Hold each stretch for 5 seconds.",
+    "conclusion": "Great job on completing the Right Hand Home Row exercises! Return to these exercises regularly."
+}

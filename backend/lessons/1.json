@@ -1,0 +1,90 @@
+{
+    "metadata": {
+        "lesson_id": "LHHR_001",
+        "lesson_level": "beginner",
+        "duration": "20 minutes",
+        "date_created": "2023-08-05",
+        "last_modified": "2023-08-05",
+        "language": "en",
+        "keyboard": "qwerty_norwegian"
+    },
+    "lesson_title": "Norwegian Keyboard Practice: Left Hand Home Row",
+    "chapter": "Chapter 2: Left hand Home Row Keys",
+    "objective": "Familiarize yourself with the left hand home row keys, building muscle memory and accuracy.",
+    "warm_up": "Before starting, ensure your left hand is correctly placed on the home row: Little finger on 'A', Ring finger on 'S', Middle finger on 'D', Index finger on 'F'. Your thumb should rest lightly on the space bar.",
+    "exercises": [
+        {
+            "name": "Exercise 1: Single Key Strokes",
+            "description": "Focus on pressing each home row key individually.",
+            "tasks": [
+                "A A A A A",
+                "S S S S S",
+                "D D D D D",
+                "F F F F F"
+            ]
+        },
+        {
+            "name": "Exercise 2: Key Combinations",
+            "description": "Press keys in varying sequences.",
+            "tasks": [
+                "ASDF",
+                "FDSA",
+                "ADSF",
+                "SAFD",
+                "SDAF",
+                "FDAS"
+            ]
+        },
+        {
+            "name": "Exercise 3: Word Practice",
+            "description": "Type the following combinations.",
+            "tasks": [
+                "Sad",
+                "Fad",
+                "Dad",
+                "Add",
+                "Fads",
+                "Adds",
+                "Dafa",
+                "Sasa",
+                "Dasa",
+                "Fasa",
+                "Sads",
+                "Fafs",
+                "Fasd",
+                "Dasf",
+                "Sdfs",
+                "Dfas",
+                "Ssda",
+                "Afds"
+            ]
+        },
+        {
+            "name": "Exercise 4: Rapid Repetition",
+            "description": "Type the following sequence rapidly.",
+            "tasks": [
+                "ASDF FDSA ADSF SAFD SDAF FDAS"
+            ]
+        }
+    ],
+    "lesson_images": [
+        "https://example.com/lesson_image1.jpg",
+        "https://example.com/lesson_image2.jpg"
+    ],
+    "progress_tracking": {
+        "completion_status": false,
+        "accuracy_target": 95,
+        "speed_target": 25
+    },
+    "feedback_and_tips": {
+        "common_mistakes": "Rushing through exercises might lead to errors. Ensure you maintain a steady pace and prioritize accuracy over speed.",
+        "additional_resources": []
+    },
+    "user_feedback_mechanism": {
+        "user_rating": null,
+        "comments_section": []
+    },
+    "next_lesson_id": "LHHR_002",
+    "cool_down": "After completing the exercises, stretch each finger individually. Pull gently back on each tip, ensuring you feel a light stretch but no pain. Hold each stretch for 5 seconds.",
+    "conclusion": "Great job on completing the Left Hand Home Row exercises! Return to these exercises regularly."
+}
