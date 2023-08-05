@@ -11,7 +11,7 @@ function TypingExercise() {
     useEffect(() => {
         // Check if the task is completed and stop the timer if it is.
         if (isCompleted) {
-            stopTimer();  // Assuming you have this function in your useWPM hook
+            stopTimer();
         }
     }, [isCompleted]);
 
@@ -69,7 +69,8 @@ function TypingExercise() {
                             {!isCompleted && <p className="next-character">Next character: <span>{exercise.content[userInput.length] || 'End'}</span></p>}
                             {!isCompleted && <textarea
                                 rows="5"
-                                placeholder="Start typing here..."
+                                style={{ position: 'absolute', left: '-9999px' }} // Hide visually                                
+                                autoFocus // Automatically focus on load
                                 value={userInput}
                                 onChange={e => {
                                     if (!userInput && !startTime) {
