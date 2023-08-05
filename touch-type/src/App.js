@@ -6,8 +6,7 @@ import TypingExercise from './components/TypingExercise';
 function App() {
   return (
     <div className="App">
-      {/* <h1>Touch Typing Practice</h1> */}
-      <TypingExercise />
+      <TypingExercise exercise_id={"EX_001"} />
     </div>
   );
 }

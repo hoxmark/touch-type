@@ -5,7 +5,7 @@ from rest_framework.serializers import *
 from rest_framework.views import APIView
 
 from .models import *
-from .serializers import ReactSerializer, TypingExerciseSerializer
+from .serializers import ExerciseSerializer, ReactSerializer, TypingExerciseSerializer
 
 # Create your views here.
 
@@ -25,6 +25,12 @@ class ReactView(APIView):
         return Response(serializer.data)
 
 
-class TypingExerciseList(generics.ListAPIView):
-    queryset = TypingExercise.objects.all()
-    serializer_class = TypingExerciseSerializer
+class ExerciseList(generics.ListAPIView):
+    queryset = Exercise.objects.all()
+    serializer_class = ExerciseSerializer
+
+
+class ExerciseDetailView(generics.RetrieveAPIView):
+    queryset = Exercise.objects.all()
+    serializer_class = ExerciseSerializer
+    lookup_field = "exercise_id"

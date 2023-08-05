@@ -38,3 +38,14 @@ class TypingExercise(models.Model):
         verbose_name = "Typing Exercise"
         verbose_name_plural = "Typing Exercises"
         ordering = ["-date_added"]
+
+
+class Exercise(models.Model):
+    exercise_id = models.CharField(max_length=10, unique=True, primary_key=True)
+    lesson_id = models.CharField(max_length=10)
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    tasks = models.TextField()
+
+    def __str__(self):
+        return self.name

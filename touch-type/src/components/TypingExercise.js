@@ -9,10 +9,11 @@ import ExerciseFooter from "./ExerciseFooter";
 import ExerciseHeader from "./ExerciseHeader";
 
 
-function TypingExercise() {
-    const [exercises, setExercises] = useState([]);
+function TypingExercise({ exercise_id }) {
     const [userInput, setUserInput] = useState('');
     const [isCompleted, setIsCompleted] = useState(false);
+    const [exercise, setExercise] = useState(null);
+
 
     useEffect(() => {
         // Check if the task is completed and stop the timer if it is.
@@ -30,33 +31,33 @@ function TypingExercise() {
         calculateWPM
     } = useWPM();  // Use the custom hook
 
-
     useEffect(() => {
-        fetch('/api/exercises/')
+        fetch(`/api/exercise/${exercise_id}/`)
             .then(response => response.json())
-            .then(data => setExercises(data));
+            .then(data => setExercise(data));
     }, []);
-
 
     return (
         <div>
             <section className="exercise-section">
-                {exercises.map(exercise => (
-                    <div className="exercise-container" key={exercise.id}>
+                {exercise && (
+                    <div className="exercise-container">
                         <ExerciseHeader
-                            title={exercise.title}
+                            title={exercise.name}
                             elapsedTime={elapsedTime}
                             WPM={WPM}
                         />
+                        {/* Display the Description Here */}
+                        <p className="exercise-description">{exercise.description}</p>
                         <ExerciseContent
-                            content={exercise.content}
+                            content={exercise.tasks.toLowerCase()} // Convert to lowercase, temporary while imported data is in uppercase
                             userInput={userInput}
                             isCompleted={isCompleted}
                             onInputChange={e => {
                                 if (!userInput && !startTime) {
                                     startTimer();
                                 }
-                                if (e.target.value === exercise.content) {
+                                if (e.target.value === exercise.tasks) {
                                     setIsCompleted(true);
                                 } else {
                                     setIsCompleted(false);
@@ -68,13 +69,14 @@ function TypingExercise() {
                         {isCompleted && <ExerciseFooter />}
                         <h3>Look at this keyboard, not your own</h3>
                         <NorwegianMacKeyboard
-                            targetKey={(exercise.content[userInput.length] || '').toUpperCase()}
+                            targetKey={(exercise.tasks[userInput.length] || '').toUpperCase()}
                         />
                     </div>
-                ))}
+                )}
             </section>
         </div>
     );
+
 
 }
 
