@@ -1,7 +1,7 @@
 // src/components/NorwegianMacKeyboard.js
+// https://github.com/uiwjs/react-mac-keyboard - maybe change to this? 
 import React from 'react';
 import '../../css/keyboards/NorwegianMacKeyboard.css';
-
 function NorwegianMacKeyboard({ targetKey }) {
     const rows = [
         ['\'', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ' + ', ' ´ ', '⌫'],
