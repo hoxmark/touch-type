@@ -4,7 +4,7 @@ import '../css/TypingExcercise.css';
 import useWPM from '../hooks/useWPM'; // Import the custom hook
 import NorwegianMacKeyboard from "./keyboards/NorwegianMacKeyboard";
 
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import ExerciseContent from "./ExerciseContent";
 import ExerciseFooter from "./ExerciseFooter";
 import ExerciseHeader from "./ExerciseHeader";
@@ -15,6 +15,7 @@ function TypingExercise() {
     const [isCompleted, setIsCompleted] = useState(false);
     const [exercise, setExercise] = useState(null);
     const { exercise_id } = useParams();  // Access route parameters
+    const navigate = useNavigate(); // Hook for programmatic navigation
 
     useEffect(() => {
         // Check if the task is completed and stop the timer if it is.
@@ -37,6 +38,10 @@ function TypingExercise() {
             .then(response => response.json())
             .then(data => setExercise(data));
     }, [exercise_id]); // Add exercise_id as a dependency
+
+    const handleBackClick = () => {
+        navigate('/select-exercise'); // Navigate back to exercise selector
+    };
 
     const handleRestartClick = () => {
         setExercise(null); // Reset the exercise state (adjust this based on your state management)
@@ -71,18 +76,13 @@ function TypingExercise() {
                                 if (!userInput && !startTime) {
                                     startTimer();
                                 }
-                                let newValue = e.target.value;
-
-                                // Replace newline character with return symbol
-                                newValue = newValue.replace(/\n/g, '⏎');
-
-                                if (newValue === exercise.tasks) {
+                                if (e.target.value === exercise.tasks) {
                                     setIsCompleted(true);
                                 } else {
                                     setIsCompleted(false);
                                 }
-                                setUserInput(newValue);
-                                calculateWPM(newValue);
+                                setUserInput(e.target.value);
+                                calculateWPM(e.target.value);
                             }}
                         />
                         <div className="button-container">

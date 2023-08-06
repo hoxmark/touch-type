@@ -1,0 +1,57 @@
+/* src/css/ExerciseContent.css */
+
+.exercise-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    color: #B1D4E0;
+    width: 90%;
+    /* Increase the width to make the content larger */
+    max-width: 1200px;
+    /* Set a max-width so that the content doesn't become too wide on large screens */
+    margin: auto;
+    /* Auto margin for center alignment */
+    box-sizing: border-box;
+    /* So that padding doesn't affect the total width */
+}
+
+.text-display {
+    border: 1px solid #B1D4E0;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 2em;
+    /* Increase font-size */
+    line-height: 1.5;
+    width: 100%;
+    /* Change to 100% to fill up the space */
+    text-align: left;
+    background-color: #0C2D48;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.character-key {
+    display: inline;
+    letter-spacing: 0.2em;
+    /* Add space around each character */
+}
+
+.correct {
+    color: #2E8BC0;
+}
+
+.incorrect {
+    color: #FF0000;
+}
+
+.active {
+    background-color: #B1D4E0;
+    color: #0C2D48;
+}
+
+.next-character {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
