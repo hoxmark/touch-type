@@ -4,16 +4,19 @@ import '../css/TypingExcercise.css';
 import useWPM from '../hooks/useWPM'; // Import the custom hook
 import NorwegianMacKeyboard from "./keyboards/NorwegianMacKeyboard";
 
+import { useNavigate, useParams } from "react-router-dom";
 import ExerciseContent from "./ExerciseContent";
 import ExerciseFooter from "./ExerciseFooter";
 import ExerciseHeader from "./ExerciseHeader";
 
 
-function TypingExercise({ exercise_id }) {
+
+function TypingExercise() {
     const [userInput, setUserInput] = useState('');
     const [isCompleted, setIsCompleted] = useState(false);
     const [exercise, setExercise] = useState(null);
-
+    const { exercise_id } = useParams();  // Access route parameters
+    const navigate = useNavigate(); // Hook for programmatic navigation
 
     useEffect(() => {
         // Check if the task is completed and stop the timer if it is.
@@ -32,10 +35,24 @@ function TypingExercise({ exercise_id }) {
     } = useWPM();  // Use the custom hook
 
     useEffect(() => {
-        fetch(`/api/exercise/${exercise_id}/`)
+        fetch(`/api/exercise/${exercise_id}/`) // Use the exercise_id parameter in the API request
             .then(response => response.json())
             .then(data => setExercise(data));
-    }, []);
+    }, [exercise_id]); // Add exercise_id as a dependency
+
+    const handleBackClick = () => {
+        navigate('/select-exercise'); // Navigate back to exercise selector
+    };
+
+    const handleRestartClick = () => {
+        setExercise(null); // Reset the exercise state (adjust this based on your state management)
+        setUserInput(''); // Reset the text input state
+
+        fetch(`/api/exercise/${exercise_id}/`) // Fetch the exercise data again
+            .then(response => response.json())
+            .then(data => setExercise(data));
+    };
+
 
     return (
         <div>
@@ -66,6 +83,10 @@ function TypingExercise({ exercise_id }) {
                                 calculateWPM(e.target.value);
                             }}
                         />
+                        <div>
+                            <button onClick={handleBackClick}>Back to exercise list</button>
+                            <button onClick={handleRestartClick}>Restart Exercise</button>
+                        </div>
                         {isCompleted && <ExerciseFooter />}
                         <h3>Look at this keyboard, not your own</h3>
                         <NorwegianMacKeyboard

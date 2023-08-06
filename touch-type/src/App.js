@@ -1,12 +1,11 @@
+// src/App.js
 import React from 'react';
-import './App.css';
-import TypingExercise from './components/TypingExercise';
-
+import AppRouter from './Router';
 
 function App() {
   return (
     <div className="App">
-      <TypingExercise exercise_id={"EX_001"} />
+      <AppRouter />
     </div>
   );
 }
