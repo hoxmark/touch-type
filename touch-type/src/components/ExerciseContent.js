@@ -1,5 +1,5 @@
 // src/components/ExerciseContent.js
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 
 const highlightCharDifferences = (content, input) => {
@@ -28,7 +28,36 @@ const highlightCharDifferences = (content, input) => {
     });
 };
 
+
 function ExerciseContent({ content, userInput, isCompleted, onInputChange }) {
+    const textareaRef = useRef();
+
+
+    useEffect(() => {
+        const handleBlur = (e) => {
+            // Check if the related target (element gaining focus) is not one of the buttons or header elements
+            if (e.relatedTarget && (e.relatedTarget.id === 'backButton'
+                || e.relatedTarget.id === 'restartButton'
+                || e.relatedTarget.id === 'loginButton'
+                || e.relatedTarget.id === 'headerLogo')) {
+                return;
+            }
+
+            if (textareaRef.current) {
+                textareaRef.current.focus();
+            }
+        };
+
+        const textarea = textareaRef.current;
+        textarea.addEventListener('blur', handleBlur);
+
+        return () => {
+            textarea.removeEventListener('blur', handleBlur);
+        };
+    }, []);
+
+
+
     return (
         <div className="exercise-content">
             <div className="text-display">
@@ -41,6 +70,7 @@ function ExerciseContent({ content, userInput, isCompleted, onInputChange }) {
             )}
             {!isCompleted && (
                 <textarea
+                    ref={textareaRef}
                     rows="5"
                     style={{ position: 'absolute', left: '-9999px' }}
                     autoFocus

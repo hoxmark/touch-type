@@ -1,0 +1,40 @@
+/* src/css/App.css */
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(20, 93, 160, 0.8);
+    /* Dimmed blue */
+    color: #B1D4E0;
+    z-index: 100;
+    /* To make sure it's always on top */
+}
+
+.header-title {
+    margin: 0;
+    cursor: pointer;
+}
+
+.login-container {
+    /* Add styles for your login section here */
+    margin-right: 30px;
+
+}
+
+.login-button {
+    background-color: #2E8BC0;
+    border: none;
+    color: #B1D4E0;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #B1D4E0;
+    color: #2E8BC0;
+}

@@ -8,8 +8,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import ExerciseContent from "./ExerciseContent";
 import ExerciseFooter from "./ExerciseFooter";
 import ExerciseHeader from "./ExerciseHeader";
-
-
+import Header from './Header';
 
 function TypingExercise() {
     const [userInput, setUserInput] = useState('');
@@ -55,10 +54,13 @@ function TypingExercise() {
 
 
     return (
-        <div>
+        <div className="app">
+            <Header />
             <section className="exercise-section">
                 {exercise && (
                     <div className="exercise-container">
+
+
                         <ExerciseHeader
                             title={exercise.name}
                             elapsedTime={elapsedTime}
@@ -83,12 +85,11 @@ function TypingExercise() {
                                 calculateWPM(e.target.value);
                             }}
                         />
-                        <div>
-                            <button onClick={handleBackClick}>Back to exercise list</button>
-                            <button onClick={handleRestartClick}>Restart Exercise</button>
+                        <div className="button-container">
+                            <button id="restartButton" onClick={handleRestartClick}>Restart Exercise</button>
                         </div>
                         {isCompleted && <ExerciseFooter />}
-                        <h3>Look at this keyboard, not your own</h3>
+                        <h3 className="keyboard-header">Look at this keyboard, not your own</h3>
                         <NorwegianMacKeyboard
                             targetKey={(exercise.tasks[userInput.length] || '').toUpperCase()}
                         />
@@ -97,8 +98,6 @@ function TypingExercise() {
             </section>
         </div>
     );
-
-
 }
 
 export default TypingExercise;
