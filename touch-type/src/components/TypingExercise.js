@@ -10,6 +10,9 @@ import ExerciseFooter from "./ExerciseFooter";
 import ExerciseHeader from "./ExerciseHeader";
 import Header from './Header';
 
+import exercisesData from '../assets/exercises.json';
+
+
 function TypingExercise() {
     const [userInput, setUserInput] = useState('');
     const [isCompleted, setIsCompleted] = useState(false);
@@ -32,20 +35,27 @@ function TypingExercise() {
         calculateWPM
     } = useWPM();  // Use the custom hook
 
+
     useEffect(() => {
-        fetch(`/api/exercise/${exercise_id}/`) // Use the exercise_id parameter in the API request
-            .then(response => response.json())
-            .then(data => setExercise(data));
-    }, [exercise_id]); // Add exercise_id as a dependency
+        // Use the Array find method to find the exercise with the correct id
+        const foundExercise = exercisesData.exercises.find(ex => ex.exercise_id === exercise_id);
+        // Set the found exercise to state
+        setExercise(foundExercise);
+    }, [exercise_id]);
+
+    
+    //useEffect(() => {
+    //    fetch(`/api/exercise/${exercise_id}/`) // Use the exercise_id parameter in the API request
+    //        .then(response => response.json())
+    //        .then(data => setExercise(data));
+    //}, [exercise_id]); // Add exercise_id as a dependency
 
     const handleRestartClick = () => {
-        setExercise(null); // Reset the exercise state (adjust this based on your state management)
         setUserInput(''); // Reset the text input state
-
-        fetch(`/api/exercise/${exercise_id}/`) // Fetch the exercise data again
-            .then(response => response.json())
-            .then(data => setExercise(data));
+        const foundExercise = exercisesData.exercises.find(ex => ex.exercise_id === exercise_id); // Find the exercise data again
+        setExercise(foundExercise); // Reset the exercise state with the found exercise
     };
+
 
 
     return (
