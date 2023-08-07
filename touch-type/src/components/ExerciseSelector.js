@@ -2,14 +2,16 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
+import exercisesData from '../assets/exercises.json';
 
 function ExerciseSelector() {
     const [exercises, setExercises] = useState([]);
 
     useEffect(() => {
-        fetch('/api/exercises/')
-            .then(response => response.json())
-            .then(data => setExercises(data));
+        setExercises(exercisesData.exercises);
+        //fetch('/api/exercises/')
+        //    .then(response => response.json())
+        //    .then(data => setExercises(data));
     }, []);
 
     return (
