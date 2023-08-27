@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 import exercisesData from '../assets/exercises.json';
 
-function ExerciseSelector() {
+function ExerciseSelector(welcome) {
     const [exercises, setExercises] = useState([]);
 
     useEffect(() => {
@@ -18,6 +18,7 @@ function ExerciseSelector() {
         <div className="app">
             <div className="header">
                 <h2>Select an Exercise</h2>
+                <p>{welcome.welcome}</p>
             </div>
             <div className="card-container">
                 {exercises.map(exercise => (

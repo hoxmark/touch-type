@@ -19,7 +19,7 @@ function AppRouter() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<div> Hello world </div>} />
+                <Route path="/" element={<ExerciseSelector welcome="Welcome" />} />
                 <Route path="/select-exercise" element={<ExerciseSelector />} />
                 <Route path="/typing-exercise/:exercise_id" element={<TypingExercise />} />
                 <Route path="*" element={<NoMatch />} />
