@@ -5,28 +5,28 @@
             "lesson_id": "LHHR_001",
             "name": "Exercise 1: Single Key Familiarization",
             "description": "Focus on pressing each home row key individually to build muscle memory.",
-            "tasks": "A A A A A↵S S S S S↵D D D D D↵F F F F F"
+            "tasks": "A A A A A⏎S S S S S⏎D D D D D⏎F F F F F"
         },
         {
             "exercise_id": "EX_002",
             "lesson_id": "LHHR_001",
             "name": "Exercise 2: Pair Combinations",
             "description": "Practice combinations of two keys to build finger coordination.",
-            "tasks": "AS AS AS↵SD SD SD↵DF DF DF↵AD AD AD↵AF AF AF↵SF SF SF"
+            "tasks": "AS AS AS⏎SD SD SD⏎DF DF DF⏎AD AD AD⏎AF AF AF⏎SF SF SF"
         },
         {
             "exercise_id": "EX_003",
             "lesson_id": "LHHR_001",
             "name": "Exercise 3: Trio Combinations",
             "description": "Introduce sequences of three keys for a slightly more challenging task.",
-            "tasks": "ASD ASD ASD↵SDF SDF SDF↵ADS ADS ADS↵ADF ADF ADF↵SAF SAF SAF↵DAS DAS DAS"
+            "tasks": "ASD ASD ASD⏎SDF SDF SDF⏎ADS ADS ADS⏎ADF ADF ADF⏎SAF SAF SAF⏎DAS DAS DAS"
         },
         {
             "exercise_id": "EX_004",
             "lesson_id": "LHHR_001",
             "name": "Exercise 4: Full Left Hand Combinations",
             "description": "Practice sequences that require coordination of all fingers on the left hand.",
-            "tasks": "ASDF ASDF ASDF↵FDSA FDSA FDSA↵ADSF ADSF ADSF↵SAFD SAFD SAFD↵SDAF SDAF SDAF↵FDAS FDAS FDAS"
+            "tasks": "ASDF ASDF ASDF⏎FDSA FDSA FDSA⏎ADSF ADSF ADSF⏎SAFD SAFD SAFD⏎SDAF SDAF SDAF⏎FDAS FDAS FDAS"
         }
     ]
 }
