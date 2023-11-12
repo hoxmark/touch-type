@@ -1,6 +1,7 @@
+// src/hooks/useWPM.js
 import { useEffect, useRef, useState } from 'react';
 
-function useWPM() {
+function useWPM(exerciseText) {
     const [startTime, setStartTime] = useState(null);
     const [elapsedTime, setElapsedTime] = useState(0);
     const [WPM, setWPM] = useState(0);
@@ -10,31 +11,41 @@ function useWPM() {
         if (startTime) {
             intervalRef.current = setInterval(() => {
                 const now = new Date().getTime();
-                const timeElapsed = Math.round((now - startTime) / 1000);
+                const timeElapsed = (now - startTime) / 1000;
                 setElapsedTime(timeElapsed);
             }, 1000);
         }
 
         return () => {
             clearInterval(intervalRef.current);
-        }
+        };
     }, [startTime]);
 
     const startTimer = () => {
-        setStartTime(new Date().getTime());
-    };
-
-    const stopTimer = () => {
-        if (intervalRef.current) {
-            clearInterval(intervalRef.current);
-            intervalRef.current = null;
+        if (!startTime) { // prevent restarting if already started
+            setStartTime(new Date().getTime());
         }
     };
 
+    const stopTimer = () => {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+    };
+
     const calculateWPM = (input) => {
-        const words = input.split(" ").length;
+        const words = input.trim().split(/\s+/).length; // Split by any whitespace, not just space
         const minutes = elapsedTime / 60;
-        setWPM(Math.round(words / minutes));
+        if (elapsedTime > 0) { // Prevent division by zero
+            setWPM(((words / minutes) || 0).toFixed(2));
+        }
+    };
+
+    // Reset function to clear the state
+    const reset = () => {
+        stopTimer();
+        setStartTime(null);
+        setElapsedTime(0);
+        setWPM(0);
     };
 
     return {
@@ -43,7 +54,8 @@ function useWPM() {
         WPM,
         startTimer,
         stopTimer,
-        calculateWPM
+        calculateWPM,
+        reset
     };
 }
 

@@ -18,19 +18,12 @@ function TypingExercise() {
     const [exercise, setExercise] = useState(null);
     const { exercise_id } = useParams();  // Access route parameters
 
-    // useEffect(() => {
-    //     // Check if the task is completed and stop the timer if it is.
-    //     if (isCompleted) {
-    //         stopTimer();
-    //     }
-    // }, [isCompleted]);
-
     const {
         startTime,
         elapsedTime,
         WPM,
         startTimer,
-        // stopTimer,
+        stopTimer,
         calculateWPM
     } = useWPM();  // Use the custom hook
 
@@ -44,11 +37,44 @@ function TypingExercise() {
         setExercise(foundExercise);
     }, [exercise_id]);
 
+    useEffect(() => {
+        // Calculate WPM whenever user input or elapsed time changes
+        calculateWPM(userInput);
+    }, [userInput, elapsedTime, calculateWPM]);
+
+    useEffect(() => {
+        // Stop the timer when the exercise is completed
+        if (isCompleted) {
+            stopTimer();
+        }
+    }, [isCompleted, stopTimer]);
+
     const handleRestartClick = () => {
         setUserInput('');
         setIsCompleted(false);
         startTimer();  // Restart the timer for a new attempt
     };
+
+    const handleInputChange = (e) => {
+        const newValue = e.target.value.replace(/\n/g, '⏎').toLowerCase();
+
+        // Start timer on first input change
+        if (!userInput && !startTime) {
+            startTimer();
+        }
+
+        setUserInput(newValue);
+
+        // Check for task completion
+        const taskCompleted = newValue.trim() === exercise.tasks.toLowerCase().trim();
+        if (taskCompleted && !isCompleted) {
+            setIsCompleted(true); // Set to completed
+            stopTimer(); // Stop the timer as soon as the task is completed
+        } else if (!taskCompleted && isCompleted) {
+            setIsCompleted(false); // Reset to not completed if they erase their input to correct it
+        }
+    };
+
 
     return (
         <div className="app">
@@ -66,20 +92,7 @@ function TypingExercise() {
                             content={exercise.tasks.toLowerCase()}
                             userInput={userInput}
                             isCompleted={isCompleted}
-                            onInputChange={e => {
-                                if (!userInput && !startTime) {
-                                    startTimer();
-                                }
-                                let newValue = e.target.value;
-                                newValue = newValue.replace(/\n/g, '⏎');
-                                if (newValue === exercise.tasks) {
-                                    setIsCompleted(true);
-                                } else {
-                                    setIsCompleted(false);
-                                }
-                                setUserInput(newValue);
-                                calculateWPM(newValue);
-                            }}
+                            onInputChange={handleInputChange}
                         />
                         <div className="button-container">
                             <button id="restartButton" onClick={handleRestartClick}>Restart Exercise</button>
