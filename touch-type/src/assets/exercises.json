@@ -1,74 +1,172 @@
 {
-    "exercises": [
+    "chapters": [
         {
-            "exercise_id": "EX_001",
-            "lesson_id": "LHHR_001",
-            "name": "Exercise 1: Single Key Familiarization",
-            "description": "Begin with simple key strikes to get used to the key positions.",
-            "tasks": "A S D F J K L Ø A S D F J K L Ø"
+            "chapter_id": "CH_001",
+            "name": "Getting Started",
+            "description": "This chapter introduces the basic keys and starts with simple exercises to get familiar with the keyboard layout.",
+            "exercises": [
+                {
+                    "exercise_id": "EX_001",
+                    "lesson_id": "LHHR_001",
+                    "name": "Exercise 1: Single Key Familiarization",
+                    "description": "Begin with simple key strikes to get used to the key positions.",
+                    "tasks": "A S D F J K L Ø A S D F J K L Ø"
+                },
+                {
+                    "exercise_id": "EX_002",
+                    "lesson_id": "LHHR_001",
+                    "name": "Exercise 2: Pair Combinations",
+                    "description": "Learn to type common pairs found in Norwegian language.",
+                    "tasks": "er er er⏎st st st⏎de de de⏎kj kj kj⏎ha ha ha"
+                }
+            ]
         },
         {
-            "exercise_id": "EX_002",
-            "lesson_id": "LHHR_001",
-            "name": "Exercise 2: Pair Combinations",
-            "description": "Learn to type common pairs found in Norwegian language.",
-            "tasks": "er er er⏎st st st⏎de de de⏎kj kj kj⏎ha ha ha"
+            "chapter_id": "CH_002",
+            "name": "Building Speed",
+            "description": "Focus on increasing typing speed with familiar key combinations and introducing new characters.",
+            "exercises": [
+                {
+                    "exercise_id": "EX_003",
+                    "lesson_id": "LHHR_001",
+                    "name": "Exercise 3: Trio Combinations",
+                    "description": "Type short strings that are common in Norwegian.",
+                    "tasks": "ett ett ett⏎and and and⏎som som som⏎for for for"
+                },
+                {
+                    "exercise_id": "EX_004",
+                    "lesson_id": "LHHR_001",
+                    "name": "Exercise 4: Full Left Hand Combinations",
+                    "description": "Use the left hand for some simple words and patterns.",
+                    "tasks": "fart fart fart⏎salt salt salt⏎last last last⏎flaske flaske flaske"
+                }
+            ]
         },
         {
-            "exercise_id": "EX_003",
-            "lesson_id": "LHHR_001",
-            "name": "Exercise 3: Trio Combinations",
-            "description": "Type short strings that are common in Norwegian.",
-            "tasks": "ett ett ett⏎and and and⏎som som som⏎for for for"
+            "chapter_id": "CH_003",
+            "name": "Mastering the Home Row",
+            "description": "Master the home row keys with exercises that use all fingers and introduce shifting.",
+            "exercises": [
+                {
+                    "exercise_id": "EX_005",
+                    "lesson_id": "LHHR_001",
+                    "name": "Exercise 5: Full Right Hand Combinations",
+                    "description": "Right hand exercises, now with a few Norwegian twists.",
+                    "tasks": "måne måne måne⏎klokke klokke klokke⏎stjerne stjerne stjerne⏎fjell fjell fjell"
+                },
+                {
+                    "exercise_id": "EX_006",
+                    "lesson_id": "UPR_001",
+                    "name": "Exercise 6: Upper Row Introduction",
+                    "description": "Meet the upper row with some easy Norwegian words.",
+                    "tasks": "rød rød rød⏎tak tak tak⏎pine pine pine⏎quart quart quart"
+                }
+            ]
         },
         {
-            "exercise_id": "EX_004",
-            "lesson_id": "LHHR_001",
-            "name": "Exercise 4: Full Left Hand Combinations",
-            "description": "Use the left hand for some simple words and patterns.",
-            "tasks": "fart fart fart⏎salt salt salt⏎last last last⏎flaske flaske flaske"
+            "chapter_id": "CH_004",
+            "name": "Expanding to the Whole Keyboard",
+            "description": "Expand your reach to the entire keyboard, practicing upper and lower rows and incorporating more complex combinations.",
+            "exercises": [
+                {
+                    "exercise_id": "EX_007",
+                    "lesson_id": "LWR_001",
+                    "name": "Exercise 7: Lower Row Introduction",
+                    "description": "Get to know the lower row through some common bases and suffixes.",
+                    "tasks": "zoo zoo zoo⏎vann vann vann⏎bok bok bok⏎lys lys lys"
+                },
+                {
+                    "exercise_id": "EX_008",
+                    "lesson_id": "SHFT_001",
+                    "name": "Exercise 8: Shift Key Usage",
+                    "description": "Practice using the shift key for Norwegian letters and punctuation.",
+                    "tasks": "Å å Å å Å⏎Ø ø Ø ø Ø⏎Æ æ Æ æ Æ⏎? ! ? ! ?"
+                }
+            ]
         },
         {
-            "exercise_id": "EX_005",
-            "lesson_id": "LHHR_001",
-            "name": "Exercise 5: Full Right Hand Combinations",
-            "description": "Right hand exercises, now with a few Norwegian twists.",
-            "tasks": "måne måne måne⏎klokke klokke klokke⏎stjerne stjerne stjerne⏎fjell fjell fjell"
+            "chapter_id": "CH_005",
+            "name": "Punctuation and Capitalization",
+            "description": "Learn to seamlessly type punctuation, practice capitalization, and type out sentences.",
+            "exercises": [
+                {
+                    "exercise_id": "EX_009",
+                    "lesson_id": "WRD_001",
+                    "name": "Exercise 9: Simple Words Formation",
+                    "description": "Create simple words to practice fluid motion across the keyboard.",
+                    "tasks": "katt katt katt⏎hund hund hund⏎båt båt båt⏎bil bil bil"
+                },
+                {
+                    "exercise_id": "EX_010",
+                    "lesson_id": "SENT_001",
+                    "name": "Exercise 10: Easy Sentences Construction",
+                    "description": "Build up to easy sentences that make typing practice fun.",
+                    "tasks": "En rød rev⏎Katten sover⏎Hunden løper fort⏎Bilen stopper brått"
+                }
+            ]
         },
         {
-            "exercise_id": "EX_006",
-            "lesson_id": "UPR_001",
-            "name": "Exercise 6: Upper Row Introduction",
-            "description": "Meet the upper row with some easy Norwegian words.",
-            "tasks": "rød rød rød⏎tak tak tak⏎pine pine pine⏎quart quart quart"
+            "chapter_id": "CH_006",
+            "name": "Speed and Efficiency",
+            "description": "This chapter helps improve typing speed and efficiency with a focus on drills that encourage quick and accurate keystrokes.",
+            "exercises": [
+                {
+                    "exercise_id": "EX_011",
+                    "lesson_id": "SPEE_001",
+                    "name": "Exercise 11: Speed Drills - Home Row",
+                    "description": "Drills designed to increase speed on the home row.",
+                    "tasks": "fjord⏎kaffe⏎løper⏎sammen⏎galopp⏎jul⏎klokken⏎sølv⏎"
+                },
+                {
+                    "exercise_id": "EX_012",
+                    "lesson_id": "SPEE_001",
+                    "name": "Exercise 12: Speed Drills - Upper and Lower Rows",
+                    "description": "Mixed exercises to improve speed across all rows.",
+                    "tasks": "quiz⏎voksen⏎bråk⏎piano⏎zombie⏎kvist⏎"
+                }
+            ]
         },
         {
-            "exercise_id": "EX_007",
-            "lesson_id": "LWR_001",
-            "name": "Exercise 7: Lower Row Introduction",
-            "description": "Get to know the lower row through some common bases and suffixes.",
-            "tasks": "zoo zoo zoo⏎vann vann vann⏎bok bok bok⏎lys lys lys"
+            "chapter_id": "CH_007",
+            "name": "Advanced Text Practice",
+            "description": "These exercises involve typing out longer and more complex text passages to solidify keyboard mastery.",
+            "exercises": [
+                {
+                    "exercise_id": "EX_013",
+                    "lesson_id": "ADVC_001",
+                    "name": "Exercise 13: Paragraph Typing",
+                    "description": "Type out a coherent paragraph to practice maintaining rhythm over longer texts.",
+                    "tasks": "I det fjerne hører man en ugle hyle i natten. Mørket klemmer rundt landskapet som en tykk kappe."
+                },
+                {
+                    "exercise_id": "EX_014",
+                    "lesson_id": "ADVC_001",
+                    "name": "Exercise 14: Complex Sentences",
+                    "description": "Practice typing complex sentences with varied punctuation.",
+                    "tasks": "Hun, som hadde ventet i timevis, visste at tålmodighet ville lønne seg til slutt."
+                }
+            ]
         },
         {
-            "exercise_id": "EX_008",
-            "lesson_id": "SHFT_001",
-            "name": "Exercise 8: Shift Key Usage",
-            "description": "Practice using the shift key for Norwegian letters and punctuation.",
-            "tasks": "Å å Å å Å⏎Ø ø Ø ø Ø⏎Æ æ Æ æ Æ⏎? ! ? ! ?"
-        },
-        {
-            "exercise_id": "EX_009",
-            "lesson_id": "WRD_001",
-            "name": "Exercise 9: Simple Words Formation",
-            "description": "Create simple words to practice fluid motion across the keyboard.",
-            "tasks": "katt katt katt⏎hund hund hund⏎båt båt båt⏎bil bil bil"
-        },
-        {
-            "exercise_id": "EX_010",
-            "lesson_id": "SENT_001",
-            "name": "Exercise 10: Easy Sentences Construction",
-            "description": "Build up to easy sentences that make typing practice fun.",
-            "tasks": "En rød rev⏎Katten sover⏎Hunden løper fort⏎Bilen stopper brått"
+            "chapter_id": "CH_008",
+            "name": "Numerical Typing",
+            "description": "Focus on typing numbers, including numerical data entry and using the numeric keypad if available.",
+            "exercises": [
+                {
+                    "exercise_id": "EX_015",
+                    "lesson_id": "NUMR_001",
+                    "name": "Exercise 15: Numbers and Home Row",
+                    "description": "Combine numbers with letters in common coding and mathematical scenarios.",
+                    "tasks": "a1 s2 d3 f4 j7 k8 l9 ø0⏎1a 2s 3d 4f 7j 8k 9l 0ø"
+                },
+                {
+                    "exercise_id": "EX_016",
+                    "lesson_id": "NUMR_001",
+                    "name": "Exercise 16: Data Entry Practice",
+                    "description": "Simulate data entry tasks involving numbers and text.",
+                    "tasks": "123.45⏎678,90⏎1001 kr⏎50%⏎20:00⏎"
+                }
+            ]
         }
     ]
 }
