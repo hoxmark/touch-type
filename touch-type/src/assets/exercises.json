@@ -4,29 +4,71 @@
             "exercise_id": "EX_001",
             "lesson_id": "LHHR_001",
             "name": "Exercise 1: Single Key Familiarization",
-            "description": "Focus on pressing each home row key individually to build muscle memory.",
-            "tasks": "A A A A A⏎S S S S S⏎D D D D D⏎F F F F F"
+            "description": "Begin with simple key strikes to get used to the key positions.",
+            "tasks": "A S D F J K L Ø A S D F J K L Ø"
         },
         {
             "exercise_id": "EX_002",
             "lesson_id": "LHHR_001",
             "name": "Exercise 2: Pair Combinations",
-            "description": "Practice combinations of two keys to build finger coordination.",
-            "tasks": "AS AS AS⏎SD SD SD⏎DF DF DF⏎AD AD AD⏎AF AF AF⏎SF SF SF"
+            "description": "Learn to type common pairs found in Norwegian language.",
+            "tasks": "er er er⏎st st st⏎de de de⏎kj kj kj⏎ha ha ha"
         },
         {
             "exercise_id": "EX_003",
             "lesson_id": "LHHR_001",
             "name": "Exercise 3: Trio Combinations",
-            "description": "Introduce sequences of three keys for a slightly more challenging task.",
-            "tasks": "ASD ASD ASD⏎SDF SDF SDF⏎ADS ADS ADS⏎ADF ADF ADF⏎SAF SAF SAF⏎DAS DAS DAS"
+            "description": "Type short strings that are common in Norwegian.",
+            "tasks": "ett ett ett⏎and and and⏎som som som⏎for for for"
         },
         {
             "exercise_id": "EX_004",
             "lesson_id": "LHHR_001",
             "name": "Exercise 4: Full Left Hand Combinations",
-            "description": "Practice sequences that require coordination of all fingers on the left hand.",
-            "tasks": "ASDF ASDF ASDF⏎FDSA FDSA FDSA⏎ADSF ADSF ADSF⏎SAFD SAFD SAFD⏎SDAF SDAF SDAF⏎FDAS FDAS FDAS"
+            "description": "Use the left hand for some simple words and patterns.",
+            "tasks": "fart fart fart⏎salt salt salt⏎last last last⏎flaske flaske flaske"
+        },
+        {
+            "exercise_id": "EX_005",
+            "lesson_id": "LHHR_001",
+            "name": "Exercise 5: Full Right Hand Combinations",
+            "description": "Right hand exercises, now with a few Norwegian twists.",
+            "tasks": "måne måne måne⏎klokke klokke klokke⏎stjerne stjerne stjerne⏎fjell fjell fjell"
+        },
+        {
+            "exercise_id": "EX_006",
+            "lesson_id": "UPR_001",
+            "name": "Exercise 6: Upper Row Introduction",
+            "description": "Meet the upper row with some easy Norwegian words.",
+            "tasks": "rød rød rød⏎tak tak tak⏎pine pine pine⏎quart quart quart"
+        },
+        {
+            "exercise_id": "EX_007",
+            "lesson_id": "LWR_001",
+            "name": "Exercise 7: Lower Row Introduction",
+            "description": "Get to know the lower row through some common bases and suffixes.",
+            "tasks": "zoo zoo zoo⏎vann vann vann⏎bok bok bok⏎lys lys lys"
+        },
+        {
+            "exercise_id": "EX_008",
+            "lesson_id": "SHFT_001",
+            "name": "Exercise 8: Shift Key Usage",
+            "description": "Practice using the shift key for Norwegian letters and punctuation.",
+            "tasks": "Å å Å å Å⏎Ø ø Ø ø Ø⏎Æ æ Æ æ Æ⏎? ! ? ! ?"
+        },
+        {
+            "exercise_id": "EX_009",
+            "lesson_id": "WRD_001",
+            "name": "Exercise 9: Simple Words Formation",
+            "description": "Create simple words to practice fluid motion across the keyboard.",
+            "tasks": "katt katt katt⏎hund hund hund⏎båt båt båt⏎bil bil bil"
+        },
+        {
+            "exercise_id": "EX_010",
+            "lesson_id": "SENT_001",
+            "name": "Exercise 10: Easy Sentences Construction",
+            "description": "Build up to easy sentences that make typing practice fun.",
+            "tasks": "En rød rev⏎Katten sover⏎Hunden løper fort⏎Bilen stopper brått"
         }
     ]
 }
