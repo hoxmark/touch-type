@@ -7,6 +7,8 @@ body {
 }
 
 .app {
+  padding-top: 60px;
+  /* Adjust the value based on your header's height */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +22,14 @@ body {
   padding: 20px;
   color: #B1D4E0;
   text-align: center;
+  position: fixed;
+  /* Make the header fixed */
+  top: 0;
+  /* Stick to the top */
+  z-index: 1000;
+  /* Ensure it's above other content */
 }
+
 
 a {
   color: #B1D4E0;

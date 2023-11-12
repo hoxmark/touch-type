@@ -17,7 +17,7 @@ function ExerciseSelector(welcome) {
     return (
         <div className="app">
             <div className="header">
-                <h2>Select an Exercise</h2>
+                <h1>Select an Exercise</h1>
                 <p>{welcome.welcome}</p>
             </div>
             <div className="card-container">
