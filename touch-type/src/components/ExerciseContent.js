@@ -6,24 +6,42 @@ import '../css/ExerciseContent.css';
 const highlightCharDifferences = (content, input) => {
     const contentChars = content.split('');
     const inputChars = input.split('');
+    const maxLength = Math.max(contentChars.length, inputChars.length); // Extend to the longest array
 
-    return contentChars.map((char, index) => {
+    return Array.from({ length: maxLength }).map((_, index) => {
         let className = "character-key";
+        let charToDisplay = contentChars[index] || ' '; // Default to space if content is shorter than input
 
-        if (index === input.length) {
-            className += " active";
+        // If the current index exceeds the input length, we treat it as an untyped space
+        const isUntyped = index >= input.length;
+        const isSpace = charToDisplay === ' ';
+        const inputChar = isUntyped ? null : inputChars[index]; // Input character or null if untyped
+
+        // Add 'active' class if this is the next character to be typed
+        if (index === input.length) className += " active";
+
+        // Add 'correct' or 'incorrect' class based on comparison
+        if (!isUntyped) {
+            if (inputChar === charToDisplay) {
+                className += " correct";
+            } else if (inputChar !== charToDisplay) {
+                className += " incorrect";
+                if (isSpace) {
+                    charToDisplay = '·'; // Use '·' to indicate space
+                }
+            }
         }
 
-        if (inputChars[index] === char) {
-            className += " correct";
-        } else if (inputChars[index]) {
+        // Handle multiple spaces by showing the middle dot for extra spaces typed by the user
+        if (index >= content.length && inputChar === ' ') {
             className += " incorrect";
+            charToDisplay = '·'; // Use '·' to indicate space
         }
 
         return (
             <span key={index} className={className}>
-                {char}
-                {char === "⏎" ? <br /> : null}
+                {charToDisplay === ' ' ? <span className="space-placeholder">&nbsp;</span> : charToDisplay}
+                {charToDisplay === "⏎" ? <br /> : null}
             </span>
         );
     });

@@ -55,25 +55,45 @@ function TypingExercise() {
         startTimer();  // Restart the timer for a new attempt
     };
 
-    const handleInputChange = (e) => {
-        const newValue = e.target.value.replace(/\n/g, '⏎').toLowerCase();
+    const checkCompletion = (newValue) => {
+        // Normalize both strings by trimming and converting to lowercase before comparison
+        const isInputComplete = newValue.trim().length === exercise.tasks.trim().length;
+        const isInputCorrect = newValue.trim().toLowerCase() === exercise.tasks.trim().toLowerCase();
 
-        // Start timer on first input change
-        if (!userInput && !startTime) {
+        if (isInputComplete && !isInputCorrect) {
+            // The user has finished typing, but there are errors
+            return 'error'; // Return an error state
+        } else if (isInputCorrect) {
+            // The user has finished typing and there are no errors
+            return 'complete';
+        }
+        return 'incomplete';
+    };
+
+    const handleInputChange = (e) => {
+        let newValue = e.target.value;
+        newValue = newValue.replace(/\n/g, '⏎'); // Replace new lines with '⏎' symbol
+        setUserInput(newValue);
+
+        // Start the timer on first input if it's not already started
+        if (!startTime) {
             startTimer();
         }
 
-        setUserInput(newValue);
-
-        // Check for task completion
-        const taskCompleted = newValue.trim() === exercise.tasks.toLowerCase().trim();
-        if (taskCompleted && !isCompleted) {
-            setIsCompleted(true); // Set to completed
-            stopTimer(); // Stop the timer as soon as the task is completed
-        } else if (!taskCompleted && isCompleted) {
-            setIsCompleted(false); // Reset to not completed if they erase their input to correct it
+        // Check if the task is complete and correct, or complete with errors
+        const completionStatus = checkCompletion(newValue);
+        if (completionStatus === 'complete') {
+            setIsCompleted(true);
+            stopTimer();
+        } else if (completionStatus === 'error') {
+            setIsCompleted(false); // User has finished typing but with errors
+        } else {
+            setIsCompleted(false); // User has not finished typing
         }
+
+        calculateWPM(newValue); // Calculate WPM based on the current input
     };
+
 
 
     return (
@@ -109,8 +129,14 @@ function TypingExercise() {
                         )}
                         <h3 className="keyboard-header">Look at this keyboard, not your own</h3>
                         {/* Only pass targetKey if the exercise is not completed */}
+                        {userInput.trim().length > exercise.tasks.trim().length && !isCompleted && (
+                            <div className="error-message">
+                                One or more characters are incorrect. Please check your input.
+                            </div>
+                        )}
+
                         <NorwegianMacKeyboard
-                            targetKey={isCompleted ? 'DONE' : (exercise.tasks[userInput.length] || '').toUpperCase()}
+                            targetKey={isCompleted ? 'DONE' : (exercise.tasks[userInput.length] || 'FAIL').toUpperCase()}
                         />
                     </div>
                 )}

@@ -82,3 +82,28 @@
         /* Smaller font size on smaller screens */
     }
 }
+
+/* Add this to your ExerciseContent.css */
+.character-key.space-placeholder {
+    visibility: visible;
+    /* Make the space placeholder visible */
+}
+
+.space-placeholder {
+    display: inline-block;
+    /* To ensure it occupies space */
+}
+
+.incorrect-space {
+    background-color: #F44336;
+    /* Red background for incorrect spaces */
+    color: transparent;
+    /* Hide the incorrect character */
+}
+
+.incorrect-space::after {
+    content: '·';
+    /* Show a dot for incorrect space */
+    color: #fff;
+    /* White dot on red background for visibility */
+}
