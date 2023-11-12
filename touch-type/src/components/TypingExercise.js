@@ -97,7 +97,16 @@ function TypingExercise() {
                         <div className="button-container">
                             <button id="restartButton" onClick={handleRestartClick}>Restart Exercise</button>
                         </div>
-                        {isCompleted && <ExerciseFooter />}
+                        {isCompleted && (
+                            <>
+                                <ExerciseFooter />
+                                <div className="completion-message">
+                                    <p>Congratulations! You have completed the exercise.</p>
+                                    <p><strong>Time Elapsed:</strong> {elapsedTime} seconds</p>
+                                    <p><strong>Words Per Minute:</strong> {WPM}</p>
+                                </div>
+                            </>
+                        )}
                         <h3 className="keyboard-header">Look at this keyboard, not your own</h3>
                         <NorwegianMacKeyboard
                             targetKey={(exercise.tasks[userInput.length] || '').toUpperCase()}

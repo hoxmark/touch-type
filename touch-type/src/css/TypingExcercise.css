@@ -68,3 +68,21 @@
 
 /* Ensure input area and keyboard are well-styled and responsive */
 /* Add styles for NorwegianMacKeyboard and ExerciseContent components if needed */
+
+.completion-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #dff0d8;
+    /* light green background */
+    border: 1px solid #d6e9c6;
+    /* green border */
+    border-radius: 4px;
+    color: #3c763d;
+    /* dark green text */
+    text-align: center;
+}
+
+.completion-message strong {
+    color: #31708f;
+    /* blue text for highlights */
+}
