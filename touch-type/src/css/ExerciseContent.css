@@ -5,28 +5,28 @@
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
-    color: #B1D4E0;
+    color: #333;
+    /* Updated color for better contrast and readability */
     width: 90%;
-    /* Increase the width to make the content larger */
     max-width: 1200px;
-    /* Set a max-width so that the content doesn't become too wide on large screens */
     margin: auto;
-    /* Auto margin for center alignment */
     box-sizing: border-box;
-    /* So that padding doesn't affect the total width */
 }
 
 .text-display {
-    border: 1px solid #B1D4E0;
+    border: 1px solid #ccc;
+    /* Lighter border color for a softer look */
     border-radius: 5px;
     padding: 20px;
-    font-size: 2em;
-    /* Increase font-size */
+    font-size: 1.5em;
+    /* Adjust font size if it's too large */
     line-height: 1.5;
     width: 100%;
-    /* Change to 100% to fill up the space */
     text-align: left;
-    background-color: #0C2D48;
+    background-color: #fff;
+    /* White background for the text display */
+    color: #333;
+    /* Dark text for readability */
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
@@ -34,24 +34,51 @@
 
 .character-key {
     display: inline;
-    letter-spacing: 0.2em;
-    /* Add space around each character */
+    letter-spacing: 0.1em;
+    /* Adjust letter spacing for legibility */
 }
 
 .correct {
-    color: #2E8BC0;
+    color: #4CAF50;
+    /* Green for correct characters */
 }
 
 .incorrect {
-    color: #FF0000;
+    color: #F44336;
+    /* Red for incorrect characters */
 }
 
 .active {
-    background-color: #B1D4E0;
-    color: #0C2D48;
+    background-color: #eee;
+    /* Light grey background for the active character */
+    color: #333;
+    /* Dark text for the active character for readability */
+    border-radius: 3px;
+    /* Rounded corners for the active character background */
 }
 
 .next-character {
     margin-top: 20px;
     font-size: 1.2em;
+    color: #333;
+    /* Color consistency for readability */
+}
+
+@media (max-width: 768px) {
+    .exercise-content {
+        margin-top: 20px;
+        /* Less margin on smaller screens */
+    }
+
+    .text-display {
+        padding: 10px;
+        /* Less padding on smaller screens */
+        font-size: 1em;
+        /* Smaller font size on smaller screens for better fit */
+    }
+
+    .next-character {
+        font-size: 1em;
+        /* Smaller font size on smaller screens */
+    }
 }

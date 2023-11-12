@@ -1,0 +1,70 @@
+/* TypingExcercise.css */
+
+.app {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: #333333;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+}
+
+.exercise-section {
+    max-width: 800px;
+    margin: 80px auto 0;
+    /* Adjusted top margin */
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.exercise-container {
+    margin-top: 20px;
+}
+
+.keyboard-header {
+    margin-top: 30px;
+    color: #555555;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.exercise-description {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+#restartButton {
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+#restartButton:hover {
+    background-color: #0056b3;
+}
+
+/* Exercise content and footer styles here if needed */
+
+/* Add additional media queries as necessary for responsiveness */
+@media (max-width: 768px) {
+    .exercise-section {
+        margin: 60px 10px 0;
+        /* Adjusted top margin for smaller screens */
+    }
+}
+
+/* Ensure input area and keyboard are well-styled and responsive */
+/* Add styles for NorwegianMacKeyboard and ExerciseContent components if needed */
