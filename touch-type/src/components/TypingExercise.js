@@ -108,8 +108,9 @@ function TypingExercise() {
                             </>
                         )}
                         <h3 className="keyboard-header">Look at this keyboard, not your own</h3>
+                        {/* Only pass targetKey if the exercise is not completed */}
                         <NorwegianMacKeyboard
-                            targetKey={(exercise.tasks[userInput.length] || '').toUpperCase()}
+                            targetKey={isCompleted ? 'DONE' : (exercise.tasks[userInput.length] || '').toUpperCase()}
                         />
                     </div>
                 )}
