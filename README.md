@@ -9,22 +9,14 @@ To use this component, you need to have React installed in your project. You can
 npm install typing-exercise
 
 
-## Usage
+## Test it! 
 
-To use the component, import it into your React component and pass in the `exercise_id` prop:
+you can access the website on vercel: 
+https://touch-type-two.vercel.app/
 
-```javascript
-import TypingExercise from 'typing-exercise';
 
-function App() {
-  return (
-    <TypingExercise exercise_id={1} />
-  );
-}
-
-The exercise_id prop is the ID of the exercise you want to fetch from the API.
-```
-
+## Why
+I just wanted to play around with react again
 
 # chatGPT 
 
